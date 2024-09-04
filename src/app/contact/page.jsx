@@ -79,7 +79,7 @@ function ContactForm() {
           </div>
         </div>
         <Button type="submit" className="mt-10">
-          Let’s work together
+          Let's work together
         </Button>
       </form>
     </FadeIn>
@@ -93,7 +93,7 @@ function ContactDetails() {
         Our offices
       </h2>
       <p className="mt-6 text-base text-neutral-600">
-        Prefer doing things in person? We don’t but we have to list our
+        Prefer doing things in person? We don't but we have to list our
         addresses here for legal reasons.
       </p>
 
@@ -135,14 +135,14 @@ function ContactDetails() {
 
 export const metadata = {
   title: 'Contact Us',
-  description: 'Let’s work together. We can’t wait to hear from you.',
+  description: "Let's work together. We can't wait to hear from you.",
 }
 
 export default function Contact() {
   return (
     <>
-      <PageIntro eyebrow="Contact us" title="Let’s work together">
-        <p>We can’t wait to hear from you.</p>
+      <PageIntro eyebrow="Contact us" title="Let's work together">
+        <p>We can't wait to hear from you.</p>
       </PageIntro>
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">
