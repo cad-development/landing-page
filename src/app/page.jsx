@@ -37,7 +37,7 @@ function Clients() {
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We've worked with hundreds of amazing people
+            We&apos;ve worked with hundreds of amazing people
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
@@ -68,9 +68,9 @@ function CaseStudies({ caseStudies }) {
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          We believe technology is the answer to the world's greatest
-          challenges. It's also the cause, so we find ourselves in bit of a
-          catch 22 situation.
+          We believe technology is the answer to the world&apos;s greatest
+          challenges. It&apos;s also the cause, so we find ourselves in a bit of a
+          catch-22 situation.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -142,7 +142,7 @@ function Services() {
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="Web development">
-              We specialise in crafting beautiful, high quality marketing pages.
+              We specialise in crafting beautiful, high-quality marketing pages.
               The rest of the website will be a shell that uses lorem ipsum
               everywhere.
             </ListItem>
@@ -151,13 +151,13 @@ function Services() {
               app frameworks, like Angular 1 and Google Web Toolkit.
             </ListItem>
             <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development. Which
-              mainly means adding your logo to the Shopify store template we've
+              We are at the forefront of modern e-commerce development, which
+              mainly means adding your logo to the Shopify store template we&apos;ve
               used for the past six years.
             </ListItem>
             <ListItem title="Custom content management">
-              At Studio we understand the importance of having a robust and
-              customised CMS. That's why we run all of our client projects out
+              At Studio, we understand the importance of having a robust and
+              customised CMS. That&apos;s why we run all of our client projects out
               of a single, enormous Joomla instance.
             </ListItem>
           </List>
@@ -184,7 +184,7 @@ export default async function Home() {
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
             We are a development studio working at the intersection of design
-            and technology. It's a really busy intersection though — a lot of
+            and technology. It&apos;s a really busy intersection though — a lot of
             our staff have been involved in hit and runs.
           </p>
         </FadeIn>
@@ -199,7 +199,7 @@ export default async function Home() {
         client={{ name: 'Phobia', logo: logoPhobiaDark }}
       >
         The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user's microphone without triggering one of
+        finding a way to access the user&apos;s microphone without triggering one of
         those annoying permission dialogs.
       </Testimonial>
 
