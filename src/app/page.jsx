@@ -8,27 +8,27 @@ import { List, ListItem } from '@/components/List'
 import { SectionIntro } from '@/components/SectionIntro'
 import { StylizedImage } from '@/components/StylizedImage'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-light.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-light.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-light.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-light.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-light.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-light.svg'
-import logoPhobiaDark from '@/images/clients/phobia/logo-dark.svg'
-import logoPhobiaLight from '@/images/clients/phobia/logo-light.svg'
-import logoUnseal from '@/images/clients/unseal/logo-light.svg'
+import logoAmes from '@/images/clients/ames/logo-light.svg'
+import logoLavina from '@/images/clients/lavina/logo-light.svg'
+import logoAMenu from '@/images/clients/a-menu/logo-light.svg'
+import logoMozubi from '@/images/clients/mozubi/logo-light.svg'
+import logoSudocs from '@/images/clients/sudocs/logo-light.svg'
+import logoComp from '@/images/clients/comp/logo-light.svg'
+import logoZipchatDark from '@/images/clients/zipchat/logo-dark.svg'
+import logoZipchatLight from '@/images/clients/zipchat/logo-light.svg'
+import logoPlacely from '@/images/clients/placely/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
 import { loadCaseStudies } from '@/lib/mdx'
 
 const clients = [
-  ['Phobia', logoPhobiaLight],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+  ['Zipchat', logoZipchatLight],
+  ['Lavina', logoLavina],
+  ['Placely', logoPlacely],
+  ['Sudocs', logoSudocs],
+  ['Mozubi', logoMozubi],
+  ['A-Menu', logoAMenu],
+  ['Ames', logoAmes],
+  ['COMP2', logoComp],
 ]
 
 function Clients() {
@@ -196,7 +196,7 @@ export default async function Home() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Phobia', logo: logoPhobiaDark }}
+        client={{ name: 'Zipchat', logo: logoZipchatDark }}
       >
         The team at Studio went above and beyond with our onboarding, even
         finding a way to access the user&apos;s microphone without triggering one of

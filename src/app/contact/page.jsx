@@ -5,9 +5,7 @@ import { Border } from '@/components/Border'
 import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
-import { Offices } from '@/components/Offices'
 import { PageIntro } from '@/components/PageIntro'
-import { SocialMedia } from '@/components/SocialMedia'
 
 function TextInput({ label, ...props }) {
   let id = useId()
@@ -89,15 +87,11 @@ function ContactForm() {
 function ContactDetails() {
   return (
     <FadeIn>
-      <h2 className="font-display text-base font-semibold text-neutral-950">
-        Our offices
-      </h2>
       <p className="mt-6 text-base text-neutral-600">
         Prefer doing things in person? We don't but we have to list our
         addresses here for legal reasons.
       </p>
 
-      <Offices className="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2" />
 
       <Border className="mt-16 pt-16">
         <h2 className="font-display text-base font-semibold text-neutral-950">
@@ -121,13 +115,6 @@ function ContactDetails() {
             </div>
           ))}
         </dl>
-      </Border>
-
-      <Border className="mt-16 pt-16">
-        <h2 className="font-display text-base font-semibold text-neutral-950">
-          Follow us
-        </h2>
-        <SocialMedia className="mt-6" />
       </Border>
     </FadeIn>
   )

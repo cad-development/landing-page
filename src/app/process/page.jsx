@@ -110,7 +110,7 @@ function Build() {
       </div>
 
       <Blockquote
-        author={{ name: 'Debra Fiscal', role: 'CEO of Unseal' }}
+        author={{ name: 'Debra Fiscal', role: 'CEO of Placely' }}
         className="mt-12"
       >
         Studio were so regular with their progress updates we almost began to

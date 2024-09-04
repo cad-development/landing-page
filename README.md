@@ -30,3 +30,13 @@ Resources:
 - [Next.js](https://nextjs.org/docs) - the official Next.js documentation
 - [Framer Motion](https://www.framer.com/docs/) - the official Framer Motion documentation
 - [MDX](https://mdxjs.com/) - the official MDX documentation
+
+## projects
+- zipchat ✅
+- placely ✅
+- comp2 ✅
+- a-menu
+- ames-foundation ✅
+- mozubi
+- sudocs ✅
+- lavina ✅

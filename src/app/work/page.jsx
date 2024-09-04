@@ -9,14 +9,14 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { PageIntro } from '@/components/PageIntro'
 import { Testimonial } from '@/components/Testimonial'
-import logoBrightPath from '@/images/clients/bright-path/logo-dark.svg'
-import logoFamilyFund from '@/images/clients/family-fund/logo-dark.svg'
-import logoGreenLife from '@/images/clients/green-life/logo-dark.svg'
-import logoHomeWork from '@/images/clients/home-work/logo-dark.svg'
-import logoMailSmirk from '@/images/clients/mail-smirk/logo-dark.svg'
-import logoNorthAdventures from '@/images/clients/north-adventures/logo-dark.svg'
-import logoPhobia from '@/images/clients/phobia/logo-dark.svg'
-import logoUnseal from '@/images/clients/unseal/logo-dark.svg'
+import logoAmes from '@/images/clients/ames/logo-dark.svg'
+import logoLavina from '@/images/clients/lavina/logo-dark.svg'
+import logoAMenu from '@/images/clients/a-menu/logo-dark.svg'
+import logoMozubi from '@/images/clients/mozubi/logo-dark.svg'
+import logoSudocs from '@/images/clients/sudocs/logo-dark.svg'
+import logoComp from '@/images/clients/comp/logo-dark.svg'
+import logoZipchat from '@/images/clients/zipchat/logo-dark.svg'
+import logoPlacely from '@/images/clients/placely/logo-dark.svg'
 import { formatDate } from '@/lib/formatDate'
 import { loadCaseStudies } from '@/lib/mdx'
 
@@ -92,14 +92,14 @@ function CaseStudies({ caseStudies }) {
 }
 
 const clients = [
-  ['Phobia', logoPhobia],
-  ['Family Fund', logoFamilyFund],
-  ['Unseal', logoUnseal],
-  ['Mail Smirk', logoMailSmirk],
-  ['Home Work', logoHomeWork],
-  ['Green Life', logoGreenLife],
-  ['Bright Path', logoBrightPath],
-  ['North Adventures', logoNorthAdventures],
+  ['Zipchat', logoZipchat],
+  ['Lavina', logoLavina],
+  ['Placely', logoPlacely],
+  ['Sudocs', logoSudocs],
+  ['Mozubi', logoMozubi],
+  ['A-Menu', logoAMenu],
+  ['Ames', logoAmes],
+  ['COMP2', logoComp],
 ]
 
 function Clients() {
@@ -157,7 +157,7 @@ export default async function Work() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Mail Smirk', logo: logoMailSmirk }}
+        client={{ name: 'Sudocs', logo: logoSudocs }}
       >
         We approached <em>Studio</em> because we loved their past work. They
         delivered something remarkably similar in record time.

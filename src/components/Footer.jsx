@@ -3,15 +3,14 @@ import Link from 'next/link'
 import { Container } from '@/components/Container'
 import { FadeIn } from '@/components/FadeIn'
 import { Logo } from '@/components/Logo'
-import { socialMediaProfiles } from '@/components/SocialMedia'
 
 const navigation = [
   {
     title: 'Work',
     links: [
-      { title: 'FamilyFund', href: '/work/family-fund' },
-      { title: 'Unseal', href: '/work/unseal' },
-      { title: 'Phobia', href: '/work/phobia' },
+      { title: 'Lavina', href: '/work/lavina' },
+      { title: 'Placely', href: '/work/placely' },
+      { title: 'Zipchat', href: '/work/zipchat' },
       {
         title: (
           <>
@@ -27,13 +26,8 @@ const navigation = [
     links: [
       { title: 'About', href: '/about' },
       { title: 'Process', href: '/process' },
-      { title: 'Blog', href: '/blog' },
       { title: 'Contact us', href: '/contact' },
     ],
-  },
-  {
-    title: 'Connect',
-    links: socialMediaProfiles,
   },
 ]
 
