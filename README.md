@@ -35,8 +35,8 @@ Resources:
 - zipchat ✅
 - placely ✅
 - comp2 ✅
-- a-menu
+- a-menu ✅
 - ames-foundation ✅
-- mozubi
+- mozubi ✅
 - sudocs ✅
 - lavina ✅

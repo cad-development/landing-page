@@ -77,7 +77,7 @@ function ContactForm() {
           </div>
         </div>
         <Button type="submit" className="mt-10">
-          Let's work together
+          Let&apos;s work together
         </Button>
       </form>
     </FadeIn>
@@ -87,12 +87,6 @@ function ContactForm() {
 function ContactDetails() {
   return (
     <FadeIn>
-      <p className="mt-6 text-base text-neutral-600">
-        Prefer doing things in person? We don't but we have to list our
-        addresses here for legal reasons.
-      </p>
-
-
       <Border className="mt-16 pt-16">
         <h2 className="font-display text-base font-semibold text-neutral-950">
           Email us
@@ -129,7 +123,7 @@ export default function Contact() {
   return (
     <>
       <PageIntro eyebrow="Contact us" title="Let's work together">
-        <p>We can't wait to hear from you.</p>
+        <p>We can&apos;t wait to hear from you.</p>
       </PageIntro>
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">
