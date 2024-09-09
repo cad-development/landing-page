@@ -17,6 +17,7 @@ function TextInput({ label, ...props }) {
         id={id}
         {...props}
         placeholder=" "
+        required
         className="peer block w-full border border-neutral-300 bg-transparent px-6 pb-4 pt-12 text-base/6 text-neutral-950 ring-4 ring-transparent transition focus:border-neutral-950 focus:outline-none focus:ring-neutral-950/5 group-first:rounded-t-2xl group-last:rounded-b-2xl"
       />
       <label
@@ -45,7 +46,7 @@ function RadioInput({ label, ...props }) {
 function ContactForm() {
   return (
     <FadeIn className="lg:order-last">
-      <form>
+      <form data-netlify={"true"}>
         <h2 className="font-display text-base font-semibold text-neutral-950">
           Work inquiries
         </h2>
@@ -62,9 +63,9 @@ function ContactForm() {
             name="company"
             autoComplete="organization"
           />
-          <TextInput label="Phone" type="tel" name="phone" autoComplete="tel" />
+          {/* <TextInput label="Phone" type="tel" name="phone" autoComplete="tel" /> */}
           <TextInput label="Message" name="message" />
-          <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
+          {/* <div className="border border-neutral-300 px-6 py-8 first:rounded-t-2xl last:rounded-b-2xl">
             <fieldset>
               <legend className="text-base/6 text-neutral-500">Budget</legend>
               <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2">
@@ -74,10 +75,10 @@ function ContactForm() {
                 <RadioInput label="More than $150K" name="budget" value="150" />
               </div>
             </fieldset>
-          </div>
+          </div> */}
         </div>
         <Button type="submit" className="mt-10">
-          Let&apos;s work together
+          Send
         </Button>
       </form>
     </FadeIn>
@@ -91,10 +92,9 @@ function ContactDetails() {
         <h2 className="font-display text-base font-semibold text-neutral-950">
           Email us
         </h2>
-        <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
+        {/* <dl className="mt-6 grid grid-cols-1 gap-8 text-sm sm:grid-cols-2">
           {[
-            ['Careers', 'careers@studioagency.com'],
-            ['Press', 'press@studioagency.com'],
+            ['Contact', 'careers@studioagency.com'],
           ].map(([label, email]) => (
             <div key={email}>
               <dt className="font-semibold text-neutral-950">{label}</dt>
@@ -108,7 +108,7 @@ function ContactDetails() {
               </dd>
             </div>
           ))}
-        </dl>
+        </dl> */}
       </Border>
     </FadeIn>
   )
@@ -122,14 +122,14 @@ export const metadata = {
 export default function Contact() {
   return (
     <>
-      <PageIntro eyebrow="Contact us" title="Let's work together">
-        <p>We can&apos;t wait to hear from you.</p>
+      <PageIntro eyebrow="Contact us" title="Have questions or ready to start your project? ">
+        <p>We&apos;d love to hear from you! Whether you need more information or want to discuss your ideas, our team is here to help. Send us your inquiries, and let&apos;s create something great together.</p>
       </PageIntro>
 
       <Container className="mt-24 sm:mt-32 lg:mt-40">
         <div className="grid grid-cols-1 gap-x-8 gap-y-24 lg:grid-cols-2">
           <ContactForm />
-          <ContactDetails />
+          {/* <ContactDetails /> */}
         </div>
       </Container>
     </>
