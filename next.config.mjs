@@ -15,7 +15,7 @@ import { unifiedConditional } from 'unified-conditional'
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
   scripts: {
-    postbuild: 'cp src/forms/__forms.html .next/static',
+    postbuild: 'cp src/forms/__forms.html .next/server/app',
   },
 }
 
