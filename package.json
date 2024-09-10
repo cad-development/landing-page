@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "cp src/public/* .next/static"
+    "postbuild": "cpx 'src/public/*' '.next/static'"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
