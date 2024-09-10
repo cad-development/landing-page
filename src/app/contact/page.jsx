@@ -1,4 +1,6 @@
+'use client';
 import { useId } from 'react'
+import { useState } from 'react';
 import Link from 'next/link'
 
 import { Border } from '@/components/Border'
@@ -44,9 +46,36 @@ function RadioInput({ label, ...props }) {
 }
 
 function ContactForm() {
+  const [status, setStatus] = useState(null);
+  const [error, setError] = useState(null);
+
+  const handleFormSubmit = async (event) => {
+      event.preventDefault();
+      try {
+          setStatus('pending');
+          setError(null);
+          const myForm = event.target;
+          const formData = new FormData(myForm);
+          const res = await fetch('/__forms.html', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: new URLSearchParams(formData).toString()
+          });
+          if (res.status === 200) {
+              setStatus('ok');
+          } else {
+              setStatus('error');
+              setError(`${res.status} ${res.statusText}`);
+          }
+      } catch (e) {
+          setStatus('error');
+          setError(`${e}`);
+      }
+  };
+
   return (
     <FadeIn className="lg:order-last">
-      <form data-netlify={"true"}>
+      <form name="contact" onSubmit={handleFormSubmit}>
         <h2 className="font-display text-base font-semibold text-neutral-950">
           Work inquiries
         </h2>
@@ -77,9 +106,21 @@ function ContactForm() {
             </fieldset>
           </div> */}
         </div>
-        <Button type="submit" className="mt-10">
+        <Button type="submit" className="mt-10" disabled={status === 'pending'}>
           Send
         </Button>
+        {status === 'ok' && (
+        <div className="alert alert-success">
+            <SuccessIcon />
+            Submitted!
+        </div>
+        )}
+        {status === 'error' && (
+            <div className="alert alert-error">
+                <ErrorIcon />
+                {error}
+            </div>
+        )}
       </form>
     </FadeIn>
   )
@@ -114,10 +155,10 @@ function ContactDetails() {
   )
 }
 
-export const metadata = {
-  title: 'Contact Us',
-  description: "Let's work together. We can't wait to hear from you.",
-}
+// export const metadata = {
+//   title: 'Contact Us',
+//   description: "Let's work together. We can't wait to hear from you.",
+// }
 
 export default function Contact() {
   return (
@@ -134,4 +175,40 @@ export default function Contact() {
       </Container>
     </>
   )
+}
+
+function SuccessIcon() {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="stroke-current shrink-0 h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+        >
+            <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+        </svg>
+    );
+}
+
+function ErrorIcon(success) {
+    return (
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="stroke-current shrink-0 h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+        >
+            <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+        </svg>
+    );
 }
