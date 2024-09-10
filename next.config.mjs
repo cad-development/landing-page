@@ -14,6 +14,9 @@ import { unifiedConditional } from 'unified-conditional'
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'mdx'],
+  scripts: {
+    postbuild: 'cp src/forms/__forms.html .next/static',
+  },
 }
 
 function remarkMDXLayout(source, metaName) {
