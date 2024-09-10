@@ -79,6 +79,7 @@ function ContactForm() {
         <h2 className="font-display text-base font-semibold text-neutral-950">
           Work inquiries
         </h2>
+        <input type="hidden" name="form-name" value="contact" />
         <div className="isolate mt-6 -space-y-px rounded-2xl bg-white/50">
           <TextInput label="Name" name="name" autoComplete="name" />
           <TextInput
