@@ -17,10 +17,10 @@ import logoSudocs from '@/images/clients/sudocs/logo-dark.svg'
 import logoComp from '@/images/clients/comp/logo-dark.svg'
 import logoZipchat from '@/images/clients/zipchat/logo-dark.svg'
 import logoPlacely from '@/images/clients/placely/logo-dark.svg'
-import { formatDate } from '@/lib/formatDate'
-import { loadCaseStudies } from '@/lib/mdx'
 
-function CaseStudies({ caseStudies }) {
+
+
+function Service({ services }) {
   return (
     <Container className="mt-40">
       <FadeIn>
@@ -29,58 +29,37 @@ function CaseStudies({ caseStudies }) {
         </h2>
       </FadeIn>
       <div className="mt-10 space-y-20 sm:space-y-24 lg:space-y-32">
-        {caseStudies.map((caseStudy) => (
-          <FadeIn key={caseStudy.client}>
+        {services.map((service) => (
+          <FadeIn key={service.name}>
             <article>
               <Border className="grid grid-cols-3 gap-x-8 gap-y-8 pt-16">
-                <div className="col-span-full sm:flex sm:items-center sm:justify-between sm:gap-x-8 lg:col-span-1 lg:block">
-                  {/* <div className="sm:flex sm:items-center sm:gap-x-6 lg:block">
-                    <Image
-                      src={caseStudy.logo}
-                      alt=""
-                      className="h-16 w-16 flex-none"
-                      unoptimized
-                    />
-                    <h3 className="mt-6 text-sm font-semibold text-neutral-950 sm:mt-0 lg:mt-8">
-                      {caseStudy.client}
-                    </h3>
-                  </div> */}
-                  <div className="mt-1 flex gap-x-4 sm:mt-0 lg:block">
-                    <p className="text-sm tracking-tight text-neutral-950 after:ml-4 after:font-semibold after:text-neutral-300 after:content-['/'] lg:mt-2 lg:after:hidden">
-                      {caseStudy.service}
-                    </p>
-                    <p className="text-sm text-neutral-950 lg:mt-2">
-                      <time dateTime={caseStudy.date}>
-                        {formatDate(caseStudy.date)}
-                      </time>
-                    </p>
-                  </div>
-                </div>
+
                 <div className="col-span-full lg:col-span-2 lg:max-w-2xl">
                   <p className="font-display text-4xl font-medium text-neutral-950">
-                    <Link href={caseStudy.href}>{caseStudy.title}</Link>
+                    <Link href={service.clients[0].href}>{service.title}</Link>
                   </p>
                   <div className="mt-6 space-y-6 text-base text-neutral-600">
-                    {caseStudy.summary.map((paragraph) => (
-                      <p key={paragraph}>{paragraph}</p>
-                    ))}
+                        {service.description.map((desc) => (
+                          <p key={desc}>{desc}</p>
+                        ))}
                   </div>
-                  <div className="mt-8 flex">
+                {/* TODO: Add link to client work  */}
+                  {/* <div className="mt-8 flex">
                     <Button
-                      href={caseStudy.href}
-                      aria-label={`Read case study: ${caseStudy.client}`}
+                      href={service.clients[0].href}
+                      aria-label={`Read case study: ${service.clients[0].name}`}
                     >
                       Read case study
                     </Button>
-                  </div>
-                  {caseStudy.testimonial && (
+                  </div> */}
+                  {/* {service.testimonial && (
                     <Blockquote
-                      author={caseStudy.testimonial.author}
+                      author={service.testimonial.author}
                       className="mt-12"
                     >
-                      {caseStudy.testimonial.content}
+                      {service.testimonial.content}
                     </Blockquote>
-                  )}
+                  )} */}
                 </div>
               </Border>
             </article>
@@ -138,7 +117,67 @@ export const metadata = {
 }
 
 export default async function Services() {
-  let caseStudies = await loadCaseStudies()
+  let services = [
+    {
+      name: 'Web Development',
+      title: 'Web Development',
+      description: [
+        'We specialize in developing custom web applications tailored to meet your unique business needs.',
+        'From concept to deployment, we focus on delivering seamless, high-quality applications that are secure, efficient, and optimized for growth.',
+        'Whether you need a complex platform or a simple, elegant interface, our custom web development services are designed to bring your vision to life.'],
+      clients: [
+        {
+          title: 'Project Title',
+          href: 'work/project-title',
+        }
+      ],
+    },
+    {
+      name: 'AI Development',
+      title: 'AI Development',
+      description: [
+        'We provide AI development services, including NLP solutions like AI chatbots, intelligent assistants, and AI search functionalities.',
+        'Our expertise includes building advanced AI-powered search engines, integrating APIs, predictive analytics, and machine learning models that enhance data accessibility and user interactions.',
+        'From conversational bots to custom AI search solutions, we create intelligent systems that automate tasks and elevate your business capabilities.',
+      ],
+      clients: [
+        {
+          title: 'AI Project Title',
+          href: 'work/ai-project-title',
+        },
+      ],
+    },
+    {
+        name: 'E-commerce',
+        title: 'E-commerce',
+        description: [
+          'We build robust, scalable e-commerce platforms that drive sales and enhance customer experience.',
+          'Our team designs custom online stores with secure payment gateways, inventory management, and user-friendly interfaces tailored to your brand.',
+          'From seamless shopping experiences to backend optimizations, we create e-commerce solutions that grow with your business.',
+        ],
+        clients: [
+          {
+            title: 'E-commerce Project Title',
+            href: 'work/ecommerce-project-title',
+          },
+        ],
+      },
+      {
+          name: 'Landing Pages & CMS Development',
+          title: 'Landing Pages & CMS Development',
+          description: [
+            'We create custom landing pages and CMS solutions designed to elevate your brand and engage your audience.',
+            'Our team builds user-friendly, SEO-optimized sites with easy-to-manage content systems, tailored to your business needs.',
+            'Whether launching a new product or managing content, our solutions provide the flexibility and functionality you need.',
+          ],
+          clients: [
+            {
+              title: 'Landing Page Project Title',
+              href: 'work/landing-page-project-title',
+            },
+          ],
+        },
+  ]
 
   return (
     <>
@@ -151,7 +190,7 @@ export default async function Services() {
         </p>
       </PageIntro>
 
-      <CaseStudies caseStudies={caseStudies} />
+      <Service services={services} />
 
       {/* <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
