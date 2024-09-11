@@ -6,13 +6,12 @@ import { Container } from '@/components/Container'
 import { FadeIn, FadeInStagger } from '@/components/FadeIn'
 import { GridList, GridListItem } from '@/components/GridList'
 import { PageIntro } from '@/components/PageIntro'
-import { PageLinks } from '@/components/PageLinks'
 import { SectionIntro } from '@/components/SectionIntro'
-// import { StatList, StatListItem } from '@/components/StatList'
+import { StatList, StatListItem } from '@/components/StatList'
 import imageCristian from '@/images/team/cristian.jpg'
 import imageDevin from '@/images/team/devin.jpg'
 import imageAlexandru from '@/images/team/alexandru.jpg'
-import { loadArticles } from '@/lib/mdx'
+
 
 // function Culture() {
 //   return (
@@ -45,15 +44,14 @@ import { loadArticles } from '@/lib/mdx'
 //     </div>
 //   )
 // }
-
 const team = [
   {
     title: 'Leadership',
     people: [
       {
-        name: 'Devin Tegmen',
+        name: 'Cristian Cristea',
         role: 'Co-Founder',
-        image: { src: imageDevin },
+        image: { src: imageCristian },
       },
       {
         name: 'Alexandru Iliesi',
@@ -61,62 +59,12 @@ const team = [
         image: { src: imageAlexandru },
       },
       {
-        name: 'Cristian Cristea',
+        name: 'Devin Tegmen',
         role: 'Co-Founder',
-        image: { src: imageCristian },
+        image: { src: imageDevin },
       },
     ],
   },
-  // {
-  //   title: 'Team',
-  //   people: [
-  //     {
-  //       name: 'Chelsea Hagon',
-  //       role: 'Senior Developer',
-  //       image: { src: imageChelseaHagon },
-  //     },
-  //     {
-  //       name: 'Emma Dorsey',
-  //       role: 'Senior Designer',
-  //       image: { src: imageEmmaDorsey },
-  //     },
-  //     {
-  //       name: 'Leonard Krasner',
-  //       role: 'VP, User Experience',
-  //       image: { src: imageLeonardKrasner },
-  //     },
-  //     {
-  //       name: 'Blake Reid',
-  //       role: 'Junior Copywriter',
-  //       image: { src: imageBlakeReid },
-  //     },
-  //     {
-  //       name: 'Kathryn Murphy',
-  //       role: 'VP, Human Resources',
-  //       image: { src: imageKathrynMurphy },
-  //     },
-  //     {
-  //       name: 'Whitney Francis',
-  //       role: 'Content Specialist',
-  //       image: { src: imageWhitneyFrancis },
-  //     },
-  //     {
-  //       name: 'Jeffrey Webb',
-  //       role: 'Account Coordinator',
-  //       image: { src: imageJeffreyWebb },
-  //     },
-  //     {
-  //       name: 'Benjamin Russel',
-  //       role: 'Senior Developer',
-  //       image: { src: imageBenjaminRussel },
-  //     },
-  //     {
-  //       name: 'Angela Fisher',
-  //       role: 'Front-end Developer',
-  //       image: { src: imageAngelaFisher },
-  //     },
-  //   ],
-  // },
 ]
 
 function Team() {
@@ -175,7 +123,6 @@ export const metadata = {
 }
 
 export default async function About() {
-  let blogArticles = (await loadArticles()).slice(0, 2)
 
   return (
     <>
@@ -189,26 +136,9 @@ export default async function About() {
           </p>
         </div>
       </PageIntro>
-      {/* <Container className="mt-16">
-        <StatList>
-          <StatListItem value="35" label="Underpaid employees" />
-          <StatListItem value="52" label="Placated clients" />
-          <StatListItem value="$25M" label="Invoices billed" />
-        </StatList>
-      </Container> */}
-{/*
-      <Culture /> */}
-
-      <Team />
-
-      {/* <PageLinks
-        className="mt-24 sm:mt-32 lg:mt-40"
-        title="From the blog"
-        intro="Our team of experienced designers and developers has just one thing on their mind; working on your ideas to draw a smile on the face of your users worldwide. From conducting Brand Sprints to UX Design."
-        pages={blogArticles}
-      /> */}
 
       <ContactSection />
+      <Team />
     </>
   )
 }
