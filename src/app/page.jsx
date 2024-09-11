@@ -14,7 +14,7 @@ import logoAMenu from '@/images/clients/a-menu/logo-light.svg'
 import logoMozubi from '@/images/clients/mozubi/logo-light.svg'
 import logoSudocs from '@/images/clients/sudocs/logo-light.svg'
 import logoComp from '@/images/clients/comp/logo-light.svg'
-import logoZipchatDark from '@/images/clients/zipchat/logo-dark.svg'
+import logoAmesDark from '@/images/clients/ames/logo-dark.svg'
 import logoZipchatLight from '@/images/clients/zipchat/logo-light.svg'
 import logoPlacely from '@/images/clients/placely/logo-light.svg'
 import imageLaptop from '@/images/laptop.jpg'
@@ -37,7 +37,7 @@ function Clients() {
       <Container>
         <FadeIn className="flex items-center gap-x-8">
           <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-left">
-            We&apos;ve worked with hundreds of amazing people
+            Our top projects, built with the incredible people who trusted us.
           </h2>
           <div className="h-px flex-auto bg-neutral-800" />
         </FadeIn>
@@ -64,13 +64,11 @@ function CaseStudies({ caseStudies }) {
   return (
     <>
       <SectionIntro
-        title="Harnessing technology for a brighter future"
+        title="Innovating for a Better Tomorrow"
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          We believe technology is the answer to the world&apos;s greatest
-          challenges. It&apos;s also the cause, so we find ourselves in a bit of a
-          catch-22 situation.
+          Technology presents challenges, but it&apos;s also our most powerful tool for overcoming them.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -121,12 +119,11 @@ function Services() {
     <>
       <SectionIntro
         eyebrow="Services"
-        title="We help you identify, explore and respond to new opportunities."
+        title="We help you identify, explore, and respond to new opportunities."
         className="mt-24 sm:mt-32 lg:mt-40"
       >
         <p>
-          As long as those opportunities involve giving us money to re-purpose
-          old projects — we can come up with an endless number of those.
+          Whether it&apos;s enhancing your digital presence or integrating AI-driven solutions, we are here to help you unlock new potential for your business.
         </p>
       </SectionIntro>
       <Container className="mt-16">
@@ -142,34 +139,28 @@ function Services() {
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="Web development">
-              We specialise in crafting beautiful, high-quality marketing pages.
-              The rest of the website will be a shell that uses lorem ipsum
-              everywhere.
+              We specialize in creating high-performance, visually stunning websites tailored to your brand&apos;s needs.
             </ListItem>
-            <ListItem title="Application development">
-              We have a team of skilled developers who are experts in the latest
-              app frameworks, like Angular 1 and Google Web Toolkit.
+            <ListItem title="AI integration">
+              Our team excels in integrating cutting-edge AI technologies to optimize processes, enhance user experiences, and drive business growth.
             </ListItem>
-            <ListItem title="E-commerce">
-              We are at the forefront of modern e-commerce development, which
-              mainly means adding your logo to the Shopify store template we&apos;ve
-              used for the past six years.
+            <ListItem title="E-commerce solutions">
+              We provide fully customized e-commerce platforms, making sure your online store is ready for a global audience with seamless integrations.
             </ListItem>
             <ListItem title="Custom content management">
-              At Studio, we understand the importance of having a robust and
-              customised CMS. That&apos;s why we run all of our client projects out
-              of a single, enormous Joomla instance.
+              We build flexible and intuitive content management systems, ensuring you have complete control over your digital assets.
             </ListItem>
           </List>
         </div>
       </Container>
     </>
-  )
+  );
 }
+
 
 export const metadata = {
   description:
-    'We are a development studio working at the intersection of design and technology.',
+    'We are a development agency working at the intersection of design and technology.',
 }
 
 export default async function Home() {
@@ -180,7 +171,7 @@ export default async function Home() {
       <Container className="mt-24 sm:mt-32 md:mt-56">
         <FadeIn className="max-w-3xl">
           <h1 className="font-display text-5xl font-medium tracking-tight text-neutral-950 [text-wrap:balance] sm:text-7xl">
-            Award-winning development studio based in Denmark.
+            Expertly Crafted Web Apps for Any Challenge
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
             We are a development studio working at the intersection of design
@@ -195,10 +186,9 @@ export default async function Home() {
 
       <Testimonial
         className="mt-24 sm:mt-32 lg:mt-40"
-        client={{ name: 'Zipchat', logo: logoZipchatDark }}
+        client={{ name: 'Ames', logo: logoAmesDark }}
       >
-        The team at Studio went above and beyond with our onboarding, even
-        finding a way to access the user&apos;s microphone without triggering one of those annoying permission dialogs.
+        CAD helped us create the - Capitalism for Biodiversity - campaign, which reached a wide audience and drove impactful conversations. Their creativity and execution were crucial to our success.
       </Testimonial>
 
       <Services />
