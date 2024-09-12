@@ -147,7 +147,7 @@ function Values() {
           <GridListItem title="Scalable">
             We build websites that grow with your business, adapting to increased traffic, new features, and evolving requirements.
           </GridListItem>
-          <GridListItem title="Innovation">
+          <GridListItem title="Innovative">
             We embrace the latest technologies and creative approaches, pushing boundaries to deliver cutting-edge solutions that keep your business ahead of the curve.
           </GridListItem>
         </GridList>

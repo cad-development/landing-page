@@ -159,8 +159,7 @@ export default async function Work() {
         className="mt-24 sm:mt-32 lg:mt-40"
         client={{ name: 'Sudocs', logo: logoSudocs }}
       >
-        We approached <em>Studio</em> because we loved their past work. They
-        delivered something remarkably similar in record time.
+        Working with <em>CAD</em> was a seamless experience. Their expertise and efficiency delivered exactly what we needed, faster than we expected.
       </Testimonial>
 
       <Clients />

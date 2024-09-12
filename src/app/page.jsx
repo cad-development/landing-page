@@ -44,7 +44,7 @@ function Clients() {
         <FadeInStagger faster>
           <ul
             role="list"
-            className="mt-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
+            className="my-10 grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4"
           >
             {clients.map(([client, logo]) => (
               <li key={client}>
@@ -55,6 +55,12 @@ function Clients() {
             ))}
           </ul>
         </FadeInStagger>
+        <FadeIn className="flex items-center gap-x-8">
+          <div className="flex-auto h-px bg-neutral-800" />
+          <h2 className="text-center font-display text-sm font-semibold tracking-wider text-white sm:text-right">
+            and many more..
+          </h2>
+        </FadeIn>
       </Container>
     </div>
   )
@@ -139,16 +145,16 @@ function Services() {
           </div>
           <List className="mt-16 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
             <ListItem title="Web development">
-              We specialize in creating high-performance, visually stunning websites tailored to your brand&apos;s needs.
+              We create high-performance, visually appealing websites that are perfectly tailored to your brand.
             </ListItem>
             <ListItem title="AI integration">
-              Our team excels in integrating cutting-edge AI technologies to optimize processes, enhance user experiences, and drive business growth.
+              Our team integrates advanced AI technologies to streamline processes, improve user experiences, and grow your business.
             </ListItem>
             <ListItem title="E-commerce solutions">
-              We provide fully customized e-commerce platforms, making sure your online store is ready for a global audience with seamless integrations.
+              We build custom e-commerce platforms with seamless integrations, ensuring your online store is ready for global success.
             </ListItem>
-            <ListItem title="Custom content management">
-              We build flexible and intuitive content management systems, ensuring you have complete control over your digital assets.
+            <ListItem title="Software development">
+              We develop user-friendly applications, giving you full control over your digital content.
             </ListItem>
           </List>
         </div>
