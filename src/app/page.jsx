@@ -180,8 +180,7 @@ export default async function Home() {
             Expertly Crafted Web Apps for Any Challenge
           </h1>
           <p className="mt-6 text-xl text-neutral-600">
-            We are a development studio working at the intersection of design
-            and technology. It&apos;s a really busy intersection though — a lot of our staff have been involved in hit and runs.
+            A development studio dedicated to delivering bespoke solutions that grow with your needs.
           </p>
         </FadeIn>
       </Container>
